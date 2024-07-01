@@ -4,13 +4,13 @@
 /// </summary>
 public class Ears : Sense
 {
-    private SimplePlayerController _playerController;
+    private ThirdPersonController _playerController;
 
     protected override void Start()
     {
         base.Start();
 
-        _playerController = _player.GetComponent<SimplePlayerController>();
+        _playerController = _player.GetComponent<ThirdPersonController>();
     }
 
     protected override void Update()
