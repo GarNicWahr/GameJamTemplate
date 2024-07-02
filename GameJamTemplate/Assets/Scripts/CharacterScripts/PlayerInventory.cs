@@ -4,49 +4,49 @@ using TMPro;
 public class PlayerInventory : MonoBehaviour
 {
 
-    public int ItemValueToCollect = 10;
+    public TextMeshProUGUI pushesCount;
 
-    public TextMeshProUGUI collectedItemsLabel;
+    public TextMeshProUGUI immortalityCount;
 
-    public int CollectedItemsValue { get; private set; }
+    public GameObject staminaBar;
 
-    private int _availablePushes;
+    private int _availablePushes = 0;
 
-    private int _availableImmortality;
+    private int _availableImmortality = 0;
 
-    private int _availableSpeedboost;
+    private int _availableSpeedboost = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        CollectedItemsValue = 0;
+        _availablePushes = 3;
+        
         UpdateHUD();
     }
 
-    public void ItemCollected(int itemValue,int index)
+    public void ItemCollected(int index)
     {
 
-        if(index == 0)
+        if(index == 0 && _availablePushes < 3)
         {
-            print("Push away");
-            _availablePushes++;
+             _availablePushes++;
         }
-        if(index == 1)
+        if(index == 1 && _availableImmortality == 0)
         {
-            print("Immortal");
-
+            _availableImmortality++;
         }
         if(index == 2)
         {
-            print("Speed");
+            _availableSpeedboost++;
         }
-        CollectedItemsValue += itemValue;
         UpdateHUD();
     }
 
     private void UpdateHUD()
     {
-        collectedItemsLabel.text = CollectedItemsValue + "/" + ItemValueToCollect;
+        pushesCount.text = _availablePushes.ToString();
+
+
     }
 
 }
