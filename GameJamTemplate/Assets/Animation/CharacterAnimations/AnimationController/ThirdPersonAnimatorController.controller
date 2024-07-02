@@ -399,14 +399,14 @@ AnimatorStateMachine:
     second:
     - {fileID: -7289739979848838895}
     - {fileID: -5932142671357248520}
-  - first: {fileID: -1825134920468875052}
-    second:
-    - {fileID: 6157067883335021355}
-    - {fileID: -4406284279534452590}
   - first: {fileID: -4294200746798056209}
     second:
     - {fileID: 7718014970385748111}
     - {fileID: -5084281274218213376}
+  - first: {fileID: -1825134920468875052}
+    second:
+    - {fileID: 6157067883335021355}
+    - {fileID: -4406284279534452590}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 260, z: 0}
@@ -662,7 +662,7 @@ BlendTree:
     m_DirectBlendParameter: speed
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 57f3ebca8a3e3e1459d0e0f196ef3ca6,
+    m_Motion: {fileID: -203655887218126122, guid: 23627dcde4a98e24f96cb7e0c8564a6f,
       type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
@@ -671,7 +671,7 @@ BlendTree:
     m_DirectBlendParameter: speed
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 23627dcde4a98e24f96cb7e0c8564a6f,
+    m_Motion: {fileID: -203655887218126122, guid: b9e088115ce85be42bed0e918cad0751,
       type: 3}
     m_Threshold: 2
     m_Position: {x: 0, y: 0}
