@@ -24,13 +24,14 @@ public class NPCCatchState : BaseState
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-
+        
         // Transitions
         // Can't see or hear player
         if (!npcStateMachine.CanHearPlayer && !npcStateMachine.CanSeePlayer)
         {
             npcStateMachine.SwitchToState(npcStateMachine.IdleState);
         }
+        
     }
 
     public override void OnExitState(BaseStateMachine controller)
