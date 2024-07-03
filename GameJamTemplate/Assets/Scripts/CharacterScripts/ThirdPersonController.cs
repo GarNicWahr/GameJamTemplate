@@ -36,6 +36,8 @@ public class ThirdPersonController : MonoBehaviour
     // Hash isJumping parameter
     private int _isJumpingParameterHash;
 
+    private int _isDeadParameterHash;
+
     // Is character audible (moving fast)
     public bool IsAudible { get; private set; }
 
@@ -63,6 +65,7 @@ public class ThirdPersonController : MonoBehaviour
         _isWalkingParameterHash = Animator.StringToHash("isMoving");
         _isCrouchingParameterHash = Animator.StringToHash("isCrouching");
         _isJumpingParameterHash = Animator.StringToHash("isJumping");
+        _isDeadParameterHash = Animator.StringToHash("isDead");
 
         _cameraTransform = Camera.main.transform;
 
@@ -104,6 +107,14 @@ public class ThirdPersonController : MonoBehaviour
 
         
         StaminaSlider.value = _playerStats.StatValues(false);
+        HealthSlider.value = _playerStats.StatValues(true);
+
+        if(_playerStats.StatValues(true)<= 0)
+        {
+            _animator.SetBool(_isDeadParameterHash, true);
+        }
+
+
         // Set speed to twice as much as input when running
         // otherwise use horizontal input
         float speed = shouldRun ? inputMagnitude * 2 : inputMagnitude;
