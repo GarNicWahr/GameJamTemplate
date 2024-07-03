@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9053442043237254318}
   - component: {fileID: 1799919468703158583}
   - component: {fileID: 6892297245122872047}
+  - component: {fileID: 3813763901883845159}
   m_Layer: 0
   m_Name: PushItem
   m_TagString: Untagged
@@ -106,6 +107,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.4683755
   m_Center: {x: 0, y: 0.20992231, z: 0}
+--- !u!114 &3813763901883845159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2317567719854346456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71dfcb9282f16d244b69b25843b840e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 0
+  ParticleSplash: {fileID: 8774706493074588941, guid: cf53761e44109634093c263bad4f8fea,
+    type: 3}
 --- !u!1001 &917327145860442566
 PrefabInstance:
   m_ObjectHideFlags: 0

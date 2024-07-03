@@ -120,7 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 2
-  ParticleSplash: {fileID: 0}
+  ParticleSplash: {fileID: 8774706493074588941, guid: cf53761e44109634093c263bad4f8fea,
+    type: 3}
 --- !u!1001 &4093798006874693410
 PrefabInstance:
   m_ObjectHideFlags: 0
