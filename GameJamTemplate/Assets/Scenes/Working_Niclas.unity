@@ -514,7 +514,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1933847334776749169, guid: d748b38eb597d1a4a947e21e7d2da529, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1508,7 +1509,7 @@ PrefabInstance:
     - target: {fileID: 7663396317019903095, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.03657555
+      value: 0.036575545
       objectReference: {fileID: 0}
     - target: {fileID: 7728545012143696651, guid: 021795922bc459742870509b8376988a,
         type: 3}
