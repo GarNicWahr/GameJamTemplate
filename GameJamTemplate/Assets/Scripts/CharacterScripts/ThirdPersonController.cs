@@ -97,7 +97,7 @@ public class ThirdPersonController : MonoBehaviour
 
         }
 
-        _currentStamina = _playerStats.StatValues(false);
+        _playerStats.SetValues(1,_currentStamina);
         StaminaSlider.value = _currentStamina;
         // Set speed to twice as much as input when running
         // otherwise use horizontal input
