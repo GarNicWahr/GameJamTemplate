@@ -93,12 +93,17 @@ public class ThirdPersonController : MonoBehaviour
         {
 
             _currentStamina -= StaminaUseage * Time.deltaTime;
-            if (_currentStamina <= 0) _currentStamina = 0;
+            _playerStats.SetValues(1, _currentStamina);
+            if (_currentStamina <= 0)
+            {
+                _currentStamina = 0;
+                _playerStats.SetValues(1, _currentStamina);
+            }
 
         }
 
-        _playerStats.SetValues(1,_currentStamina);
-        StaminaSlider.value = _currentStamina;
+        
+        StaminaSlider.value = _playerStats.StatValues(false);
         // Set speed to twice as much as input when running
         // otherwise use horizontal input
         float speed = shouldRun ? inputMagnitude * 2 : inputMagnitude;

@@ -10,7 +10,7 @@ public class PlayerInventory : MonoBehaviour
 
     public TextMeshProUGUI ImmortalityCount;
 
-    public int _availablePushes = 0;
+    public int AvailablePushes;
 
     private int _availableImmortality = 0;
 
@@ -22,21 +22,29 @@ public class PlayerInventory : MonoBehaviour
     void Start()
     {
         _playerStats = GetComponent<PlayerStats>();
-        _availablePushes = 3;
+        AvailablePushes = 3;
         _availableImmortality = 0;
         UpdateHUD();
         _playerStats.SetValues(1, 100f);
         _availableSpeedboost = _playerStats.StatValues(false);
     }
 
-    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1) && AvailablePushes > 0)
+        {
+        
+            AvailablePushes = AvailablePushes - 1;
+            PushesCount.text = AvailablePushes.ToString();
+        }
+    }
 
     public void ItemCollected(int index)
     {
 
-        if(index == 0 && _availablePushes < 3)
+        if(index == 0 && AvailablePushes < 3)
         {
-             _availablePushes++;
+             AvailablePushes++;
         }
         if(index == 1 && _availableImmortality == 0)
         {
@@ -55,7 +63,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void UpdateHUD()
     {
-        PushesCount.text = _availablePushes.ToString();
+        PushesCount.text = AvailablePushes.ToString();
 
         ImmortalityCount.text = _availableImmortality.ToString();
 
