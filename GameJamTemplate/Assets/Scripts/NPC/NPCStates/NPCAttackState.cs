@@ -13,6 +13,7 @@ public class NPCAttackState : BaseState
     private bool _isStopped;
 
     private PlayerStats _playerStats;
+    private AudioSource _audioSource;
 
 
     public override void OnEnterState(BaseStateMachine controller)
@@ -21,9 +22,13 @@ public class NPCAttackState : BaseState
         var npcStateMachine = controller as NPCStateMachine;
         
         _playerStats = GameObject.FindWithTag("Player").GetComponent<PlayerStats>();
+        _audioSource = GameObject.Find("HitSound").GetComponent<AudioSource>();
         _leaveTime = Time.time + UnityEngine.Random.Range(MinHitTime, MaxHitTime);
 
         npcStateMachine.SetAgentSpeedMultiplier(0);
+
+        // Play Hit-Sound
+        _audioSource.PlayOneShot(_audioSource.clip);
 
         // Do damage to player
         _playerStats.SetValues(0, _playerStats.StatValues(true) - npcStateMachine.Damage);
