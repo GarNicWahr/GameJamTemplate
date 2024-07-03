@@ -11,9 +11,9 @@ public class DistanceToManager : MonoBehaviour
 
     void Start()
     {
-        //Initializing min- and maxValue
+        // Initializing min- and maxValue
         distanceSlider.minValue = 0f;
-        distanceSlider.maxValue = maxDistance;
+        distanceSlider.maxValue = Vector3.Distance(player.position, manager.position);
     }
 
     void Update()
