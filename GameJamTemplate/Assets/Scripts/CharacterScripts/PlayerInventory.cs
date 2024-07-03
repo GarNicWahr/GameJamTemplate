@@ -1,20 +1,20 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
+    public Slider StaminaSlider;
 
-    public TextMeshProUGUI pushesCount;
+    public TextMeshProUGUI PushesCount;
 
-    public TextMeshProUGUI immortalityCount;
-
-    public GameObject staminaBar;
+    public TextMeshProUGUI ImmortalityCount;
 
     private int _availablePushes = 0;
 
     private int _availableImmortality = 0;
 
-    private int _availableSpeedboost = 0;
+    private float _availableSpeedboost = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -35,18 +35,20 @@ public class PlayerInventory : MonoBehaviour
         {
             _availableImmortality++;
         }
-        if(index == 2)
+        if(index == 2 && _availableSpeedboost <= 1)
         {
-            _availableSpeedboost++;
+            _availableSpeedboost = 1f;
         }
         UpdateHUD();
     }
 
     private void UpdateHUD()
     {
-        pushesCount.text = _availablePushes.ToString();
+        PushesCount.text = _availablePushes.ToString();
 
+        ImmortalityCount.text = _availableImmortality.ToString();
 
+        StaminaSlider.value = StaminaSlider.maxValue;
     }
 
 }
