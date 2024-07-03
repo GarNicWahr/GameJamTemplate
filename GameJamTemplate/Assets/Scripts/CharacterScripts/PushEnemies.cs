@@ -6,6 +6,7 @@ public class PushEnemies : MonoBehaviour
 {
     public float pushRadius = 5f;  
     public float pushDistance = 3f;
+    public GameObject ParticlePush;
 
     private PlayerInventory _inventory;
     private void Start()
@@ -19,6 +20,7 @@ public class PushEnemies : MonoBehaviour
         {
             if (_inventory.AvailablePushes > 0)
             {
+                Instantiate(ParticlePush, transform.position, Quaternion.identity);
                 PushNearbyEnemies();
             }
 
