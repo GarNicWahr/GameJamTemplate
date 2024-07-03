@@ -1,16 +1,22 @@
 using UnityEngine;
 using UnityEngine.Assertions.Must;
+using UnityEngine.UI;
 
 /// <summary>
 /// Base for a third person character controller
 /// </summary>
 public class ThirdPersonController : MonoBehaviour
 {
+    public Slider StaminaSlider;
+    public Slider HealthSlider;
+
     // how fast the character can turn
     public float RotationSpeed;
 
     // Damping for locomotion animator parameter
     public float LocomotionParameterDamping = 0.1f;
+
+    public float StaminaUseage = 10f;
 
     // Script Component
     private PlayerPhysics _scriptPlayerPhysics;
@@ -42,6 +48,10 @@ public class ThirdPersonController : MonoBehaviour
     // Character Controller of Player
     private CharacterController _characterController;
 
+    public float MaxStamina = 100f;
+    private float _currentStamina;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +67,8 @@ public class ThirdPersonController : MonoBehaviour
         _characterController = _player.GetComponent<CharacterController>();
 
         _scriptPlayerPhysics = GetComponent<PlayerPhysics>();
+
+        _currentStamina = MaxStamina;
     }
 
     // Update is called once per frame
@@ -71,13 +83,22 @@ public class ThirdPersonController : MonoBehaviour
         float inputMagnitude = Mathf.Clamp01(movementDirection.magnitude);
 
         movementDirection = Quaternion.AngleAxis(_cameraTransform.rotation.eulerAngles.y, Vector3.up) * movementDirection;
-
+        bool isSprintingInput = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        bool shouldRun = isSprintingInput && _currentStamina > 0;
         // Should run? (left or right shift held)
-        bool shouldRun = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        if (shouldRun)
+        {
 
+            _currentStamina -= StaminaUseage * Time.deltaTime;
+            if (_currentStamina <= 0) _currentStamina = 0;
+
+        }
+
+        StaminaSlider.value = _currentStamina;
         // Set speed to twice as much as input when running
         // otherwise use horizontal input
         float speed = shouldRun ? inputMagnitude * 2 : inputMagnitude;
+
 
         // Set animator isJumping parameter depending on input
 
