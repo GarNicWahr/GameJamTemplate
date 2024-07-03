@@ -3690,6 +3690,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Banana
       objectReference: {fileID: 0}
+    - target: {fileID: 1447519489968480153, guid: 49e89ee957c4c054b8d4697a8571eb73,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1948041814759650294, guid: 49e89ee957c4c054b8d4697a8571eb73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3848,16 +3853,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Pizza
       objectReference: {fileID: 0}
-    - target: {fileID: 6311268190804992707, guid: abe36196aa25ae34f8f3dae56d999e1a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6311268190804992707, guid: abe36196aa25ae34f8f3dae56d999e1a,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3945,16 +3940,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPC_Burger
-      objectReference: {fileID: 0}
-    - target: {fileID: 2598286312905496143, guid: 07841a6f0b2009f4c97efd4cf4afe2d4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2598286312905496143, guid: 07841a6f0b2009f4c97efd4cf4afe2d4,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
