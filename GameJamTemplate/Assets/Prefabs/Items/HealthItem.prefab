@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6192177959204993664}
   - component: {fileID: 3508523047569823006}
   - component: {fileID: 1339496680134555713}
+  - component: {fileID: 5106528611330756082}
   m_Layer: 0
   m_Name: HealthItem
   m_TagString: Untagged
@@ -29,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.942, y: 0.626, z: 2.318}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 386475416702992229}
   m_Father: {fileID: 0}
@@ -106,6 +107,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.36032528
   m_Center: {x: 0, y: 0.09, z: 0}
+--- !u!114 &5106528611330756082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3021988386629270803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71dfcb9282f16d244b69b25843b840e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 3
+  ParticleSplash: {fileID: 8774706493074588941, guid: cf53761e44109634093c263bad4f8fea,
+    type: 3}
 --- !u!1001 &9198215539110417088
 PrefabInstance:
   m_ObjectHideFlags: 0
