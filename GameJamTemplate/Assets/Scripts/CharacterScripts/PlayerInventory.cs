@@ -14,14 +14,22 @@ public class PlayerInventory : MonoBehaviour
 
     private int _availableImmortality = 0;
 
-    private float _availableSpeedboost = 0;
+    private float _availableSpeedboost;
 
     // Start is called before the first frame update
     void Start()
     {
         _availablePushes = 3;
+        _availableImmortality = 0;
         
         UpdateHUD();
+
+   
+    }
+
+    private void Update()
+    {
+        _availableSpeedboost = StaminaSlider.value;
     }
 
     public void ItemCollected(int index)
@@ -35,9 +43,10 @@ public class PlayerInventory : MonoBehaviour
         {
             _availableImmortality++;
         }
-        if(index == 2 && _availableSpeedboost <= 1)
+        if(index == 2 && _availableSpeedboost <= 100)
         {
-            _availableSpeedboost = 1f;
+            _availableSpeedboost = 100f;
+
         }
         UpdateHUD();
     }
@@ -48,7 +57,7 @@ public class PlayerInventory : MonoBehaviour
 
         ImmortalityCount.text = _availableImmortality.ToString();
 
-        StaminaSlider.value = StaminaSlider.maxValue;
+        StaminaSlider.value = _availableSpeedboost;
     }
 
 }
