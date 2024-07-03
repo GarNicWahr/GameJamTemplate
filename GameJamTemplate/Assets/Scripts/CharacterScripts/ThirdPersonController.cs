@@ -18,6 +18,8 @@ public class ThirdPersonController : MonoBehaviour
 
     public float StaminaUseage = 10f;
 
+    public float ImmortalityDelay;
+
     // Script Component
     private PlayerPhysics _scriptPlayerPhysics;
 
@@ -55,6 +57,12 @@ public class ThirdPersonController : MonoBehaviour
 
     private PlayerStats _playerStats;
 
+    private bool _immortality;
+
+    private PlayerInventory _playerInv;
+
+    private float _leaveTime;
+
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +74,7 @@ public class ThirdPersonController : MonoBehaviour
         _isCrouchingParameterHash = Animator.StringToHash("isCrouching");
         _isJumpingParameterHash = Animator.StringToHash("isJumping");
         _isDeadParameterHash = Animator.StringToHash("isDead");
+        _playerInv = GetComponent<PlayerInventory>();
 
         _cameraTransform = Camera.main.transform;
 
@@ -105,9 +114,32 @@ public class ThirdPersonController : MonoBehaviour
 
         }
 
-        
+        //Health and Stamina Update
         StaminaSlider.value = _playerStats.StatValues(false);
-        HealthSlider.value = _playerStats.StatValues(true);
+        if(Input.GetKeyDown(KeyCode.Alpha2) && _playerInv.AvailableImmortality > 0)
+        {
+            _immortality = true;
+
+            _playerInv.AvailableImmortality = _playerInv.AvailableImmortality - 1 ;
+        }
+        if (_immortality)
+        {
+            float health = _playerStats.StatValues(true);
+            _leaveTime = Time.time + ImmortalityDelay; 
+
+            if(Time.time > _leaveTime)
+            {
+                _immortality = false;
+
+                _playerStats.SetValues(0, health);
+            } 
+        }
+        else
+        {
+            HealthSlider.value = _playerStats.StatValues(true);
+        }
+
+        
 
         if(_playerStats.StatValues(true)<= 0)
         {

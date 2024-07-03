@@ -11,7 +11,7 @@ public class PlayerInventory : MonoBehaviour
 
     public int AvailablePushes;
 
-    private int _availableImmortality = 0;
+    public int AvailableImmortality = 0;
 
     private float _availableSpeedboost;
 
@@ -24,7 +24,7 @@ public class PlayerInventory : MonoBehaviour
     {
         _playerStats = GetComponent<PlayerStats>();
         AvailablePushes = 3;
-        _availableImmortality = 0;
+        AvailableImmortality = 0;
         UpdateHUD();
         _playerStats.SetValues(1, 100f);
         _playerStats.SetValues(0, 100f);
@@ -53,12 +53,12 @@ public class PlayerInventory : MonoBehaviour
                 AvailablePushes = 3;
             }
         }
-        if(index == 1 && _availableImmortality == 0)
+        if(index == 1 && AvailableImmortality == 0)
         {
-            _availableImmortality++;
-            if(_availableImmortality > 3)
+            AvailableImmortality++;
+            if(AvailableImmortality > 3)
             {
-                _availableImmortality = 3;
+                AvailableImmortality = 3;
             }
         }
         if(index == 2 && _availableSpeedboost <= 100)
@@ -81,7 +81,7 @@ public class PlayerInventory : MonoBehaviour
     {
         PushesCount.text = AvailablePushes.ToString();
 
-        ImmortalityCount.text = _availableImmortality.ToString();
+        ImmortalityCount.text = AvailableImmortality.ToString();
 
     }
 

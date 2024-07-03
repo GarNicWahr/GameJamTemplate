@@ -89,10 +89,13 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
   CatchState:
-    CatchDistance: 0
-    MinHitTime: 0
-    MaxHitTime: 0
-  Damage: 0
+    CatchDistance: 1
+    MinHitTime: 5
+    MaxHitTime: 6
+  AttackState:
+    MinHitTime: 0.5
+    MaxHitTime: 1
+  Damage: 15
   agent: {fileID: 0}
 --- !u!95 &5468737259444822483
 Animator:

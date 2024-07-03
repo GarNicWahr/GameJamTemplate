@@ -40,6 +40,7 @@ public class EnemySpawner : MonoBehaviour
             // Get Random EnemieType and SpawnPoint
             int enemyIndex = Random.Range(0, Enemies.Length);
             int spawnPointIndex = Random.Range(0, SpawnPoints.Length);
+            SpawnInterval = SpawnInterval - 0.5f;
 
             // Initialize Enemies
             GameObject newEnemy = Instantiate(Enemies[enemyIndex], SpawnPoints[spawnPointIndex].position, SpawnPoints[spawnPointIndex].rotation, parentObject);
