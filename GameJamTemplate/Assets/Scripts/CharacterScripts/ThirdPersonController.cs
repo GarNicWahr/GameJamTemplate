@@ -104,6 +104,14 @@ public class ThirdPersonController : MonoBehaviour
 
         
         StaminaSlider.value = _playerStats.StatValues(false);
+        HealthSlider.value = _playerStats.StatValues(true);
+
+        if(_playerStats.StatValues(true)<= 0)
+        {
+            print("Death!");
+        }
+
+
         // Set speed to twice as much as input when running
         // otherwise use horizontal input
         float speed = shouldRun ? inputMagnitude * 2 : inputMagnitude;

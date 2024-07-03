@@ -16,6 +16,8 @@ public class PlayerInventory : MonoBehaviour
 
     private float _availableSpeedboost;
 
+    private float _availableHealth;
+
     private PlayerStats _playerStats;
 
     // Start is called before the first frame update
@@ -26,7 +28,9 @@ public class PlayerInventory : MonoBehaviour
         _availableImmortality = 0;
         UpdateHUD();
         _playerStats.SetValues(1, 100f);
+        _playerStats.SetValues(0, 100f);
         _availableSpeedboost = _playerStats.StatValues(false);
+        _availableHealth = _playerStats.StatValues(true);
     }
 
     private void Update()
@@ -45,10 +49,18 @@ public class PlayerInventory : MonoBehaviour
         if(index == 0 && AvailablePushes < 3)
         {
              AvailablePushes++;
+            if (AvailablePushes > 3)
+            {
+                AvailablePushes = 3;
+            }
         }
         if(index == 1 && _availableImmortality == 0)
         {
             _availableImmortality++;
+            if(_availableImmortality > 3)
+            {
+                _availableImmortality = 3;
+            }
         }
         if(index == 2 && _availableSpeedboost <= 100)
         {
@@ -56,6 +68,11 @@ public class PlayerInventory : MonoBehaviour
             _availableSpeedboost = 100f;
             _playerStats.SetValues(1, 100f);
 
+        }
+        if(index == 3 && _availableHealth <= 100f)
+        {
+            _availableHealth = 100f;
+            _playerStats.SetValues(0, 100f);
         }
         
         UpdateHUD();
