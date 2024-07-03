@@ -51,10 +51,13 @@ public class ThirdPersonController : MonoBehaviour
     public float MaxStamina = 100f;
     private float _currentStamina;
 
+    private PlayerStats _playerStats;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        _playerStats = GetComponent<PlayerStats>();
         _animator = GetComponent<Animator>();
         _speedParameterHash = Animator.StringToHash("speed");
         _isWalkingParameterHash = Animator.StringToHash("isMoving");
@@ -94,6 +97,7 @@ public class ThirdPersonController : MonoBehaviour
 
         }
 
+        _currentStamina = _playerStats.StatValues(false);
         StaminaSlider.value = _currentStamina;
         // Set speed to twice as much as input when running
         // otherwise use horizontal input
