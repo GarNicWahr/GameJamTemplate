@@ -550,6 +550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 3
+  ParticleSplash: {fileID: 8774706493074588941, guid: cf53761e44109634093c263bad4f8fea,
+    type: 3}
 --- !u!114 &1327071187 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1331003022975005197, guid: 4889ef770275f304d9bf5b7f73cb127c,
@@ -1343,18 +1345,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4634149447922440364, guid: 021795922bc459742870509b8376988a,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00023889539
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634149447922440364, guid: 021795922bc459742870509b8376988a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.524758
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634149447922440364, guid: 021795922bc459742870509b8376988a,
+        type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.03654209
+      value: 0.000026323407
       objectReference: {fileID: 0}
     - target: {fileID: 4634149447922440364, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0020927866
+      value: 0.0000015075566
       objectReference: {fileID: 0}
     - target: {fileID: 4634149447922440364, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.05713858
+      value: -0.057176895
       objectReference: {fileID: 0}
     - target: {fileID: 4716863435354328118, guid: 021795922bc459742870509b8376988a,
         type: 3}
@@ -1461,6 +1473,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6485404800851923516, guid: 021795922bc459742870509b8376988a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00023889539
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485404800851923516, guid: 021795922bc459742870509b8376988a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.524758
+      objectReference: {fileID: 0}
     - target: {fileID: 6498141360107620745, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_Layer
@@ -1514,7 +1536,17 @@ PrefabInstance:
     - target: {fileID: 7663396317019903095, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.036575545
+      value: 0.000026377513
+      objectReference: {fileID: 0}
+    - target: {fileID: 7663396317019903095, guid: 021795922bc459742870509b8376988a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000001002147
+      objectReference: {fileID: 0}
+    - target: {fileID: 7663396317019903095, guid: 021795922bc459742870509b8376988a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.037965085
       objectReference: {fileID: 0}
     - target: {fileID: 7728545012143696651, guid: 021795922bc459742870509b8376988a,
         type: 3}
@@ -1546,6 +1578,31 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8397043673950002568, guid: 021795922bc459742870509b8376988a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397043673950002568, guid: 021795922bc459742870509b8376988a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397043673950002568, guid: 021795922bc459742870509b8376988a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00002632631
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397043673950002568, guid: 021795922bc459742870509b8376988a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000019598417
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397043673950002568, guid: 021795922bc459742870509b8376988a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.07423879
+      objectReference: {fileID: 0}
     - target: {fileID: 8472073245600869714, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_Layer
@@ -1569,12 +1626,17 @@ PrefabInstance:
     - target: {fileID: 9107703046831314696, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.036544334
+      value: 0.000026339823
       objectReference: {fileID: 0}
     - target: {fileID: 9107703046831314696, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.002052902
+      value: 0.0000014796566
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107703046831314696, guid: 021795922bc459742870509b8376988a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.05608721
       objectReference: {fileID: 0}
     - target: {fileID: 9174794827813740333, guid: 021795922bc459742870509b8376988a,
         type: 3}
@@ -1800,6 +1862,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: StaminaItem
       objectReference: {fileID: 0}
+    - target: {fileID: 2989497556136351364, guid: cac817187747b87459a681abee3612df,
+        type: 3}
+      propertyPath: ParticleSplash
+      value: 
+      objectReference: {fileID: 8774706493074588941, guid: cf53761e44109634093c263bad4f8fea,
+        type: 3}
     - target: {fileID: 9191253669321652616, guid: cac817187747b87459a681abee3612df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1958,6 +2026,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 0
+  ParticleSplash: {fileID: 8774706493074588941, guid: cf53761e44109634093c263bad4f8fea,
+    type: 3}
 --- !u!1 &8972218054307454486 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8792465714714296918, guid: 3d8655b82f90f984598d3bc933a7177c,
@@ -1977,6 +2047,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 1
+  ParticleSplash: {fileID: 8774706493074588941, guid: cf53761e44109634093c263bad4f8fea,
+    type: 3}
 --- !u!1001 &9040399736478641622
 PrefabInstance:
   m_ObjectHideFlags: 0
