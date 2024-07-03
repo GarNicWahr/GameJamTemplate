@@ -52,7 +52,7 @@ public class NPCCatchState : BaseState
         // When Player is hit > IdleState
         if (Vector3.Distance(npcStateMachine.NPCPosition, npcStateMachine.PlayerPosition) <= CatchDistance)
         {
-            _playerStats.SetValues(0, _playerStats.StatValues(true) - npcStateMachine.Damage);
+            //_playerStats.SetValues(0, _playerStats.StatValues(true) - npcStateMachine.Damage);
 
             npcStateMachine.agent.enabled = false;
             _isStopped = true;
