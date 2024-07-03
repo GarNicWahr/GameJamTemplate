@@ -133,11 +133,7 @@ MonoBehaviour:
     MinHideTime: 0
     MaxHideTime: 0
   PatrolState:
-    Waypoints:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    Waypoints: []
   CatchState:
     CatchDistance: 1
     MinHitTime: 5
