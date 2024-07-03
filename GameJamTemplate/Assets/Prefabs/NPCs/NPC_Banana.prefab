@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9073a25339c78641a4f756596de45eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 15
+  Range: 100
   HeadReferenceTransform: {fileID: 8075214789051697578}
   Fov: 360
   DetectionLayer:
@@ -62,7 +62,6 @@ GameObject:
   - component: {fileID: 4077766865681947008}
   - component: {fileID: 6641755508844334466}
   - component: {fileID: 2028098300612756021}
-  - component: {fileID: 7291454897425392485}
   m_Layer: 0
   m_Name: NPC_Banana
   m_TagString: Enemy
@@ -139,7 +138,11 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
   CatchState:
-    catchDistance: 1.1
+    CatchDistance: 0.6
+    MinHitTime: 5
+    MaxHitTime: 6
+  Damage: 10
+  agent: {fileID: 0}
 --- !u!95 &2028098300612756021
 Animator:
   serializedVersion: 5
@@ -161,29 +164,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!136 &7291454897425392485
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447519489968480153}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Height: 0.9
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &7894370034319052474
 GameObject:
   m_ObjectHideFlags: 0

@@ -633,12 +633,12 @@ PrefabInstance:
     - target: {fileID: 7663396317019903095, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000026217404
+      value: 0.000026226
       objectReference: {fileID: 0}
     - target: {fileID: 7663396317019903095, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000009960637
+      value: 0.0000009963902
       objectReference: {fileID: 0}
     - target: {fileID: 7663396317019903095, guid: 021795922bc459742870509b8376988a,
         type: 3}
@@ -2983,11 +2983,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Banana
       objectReference: {fileID: 0}
-    - target: {fileID: 1447519489968480153, guid: 49e89ee957c4c054b8d4697a8571eb73,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1948041814759650294, guid: 49e89ee957c4c054b8d4697a8571eb73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3038,45 +3033,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2028098300612756021, guid: 49e89ee957c4c054b8d4697a8571eb73,
-        type: 3}
-      propertyPath: m_UpdateMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3167852482940463509, guid: 49e89ee957c4c054b8d4697a8571eb73,
-        type: 3}
-      propertyPath: Range
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077766865681947008, guid: 49e89ee957c4c054b8d4697a8571eb73,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6641755508844334466, guid: 49e89ee957c4c054b8d4697a8571eb73,
-        type: 3}
-      propertyPath: Damage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6641755508844334466, guid: 49e89ee957c4c054b8d4697a8571eb73,
-        type: 3}
-      propertyPath: CatchState.Damage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6641755508844334466, guid: 49e89ee957c4c054b8d4697a8571eb73,
-        type: 3}
-      propertyPath: CatchState.MaxHitTime
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6641755508844334466, guid: 49e89ee957c4c054b8d4697a8571eb73,
-        type: 3}
-      propertyPath: CatchState.MinHitTime
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6641755508844334466, guid: 49e89ee957c4c054b8d4697a8571eb73,
         type: 3}
       propertyPath: CatchState.CatchDistance
-      value: 0.6
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6641755508844334466, guid: 49e89ee957c4c054b8d4697a8571eb73,
         type: 3}
