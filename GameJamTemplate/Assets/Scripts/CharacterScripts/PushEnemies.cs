@@ -15,9 +15,13 @@ public class PushEnemies : MonoBehaviour
     void Update()
     {
         // When Player has Pushes, then push Enemies
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !_inventory.AvailablePushes = 0)  
+        if (Input.GetKeyDown(KeyCode.Alpha1))  
         {
-            PushNearbyEnemies();
+            if (_inventory.AvailablePushes > 0)
+            {
+                PushNearbyEnemies();
+            }
+
         }
     }
 
