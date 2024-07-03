@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public Slider StaminaSlider;
 
     public TextMeshProUGUI PushesCount;
 

@@ -19,7 +19,7 @@ public class NPCStateMachine : BaseStateMachine
     public NPCHideState HideState;
     public NPCPatrolState PatrolState;
     public NPCCatchState CatchState;
-
+    public float Damage;
 
     private Eyes _eyes;
     private Ears _ears;
@@ -30,6 +30,7 @@ public class NPCStateMachine : BaseStateMachine
     private Animator _animator;
     private float _initialAgentSpeed;
     private int _isHidingParameterHash;
+    private PlayerStats _playerStats;
 
 #if UNITY_EDITOR
     private void OnDrawGizmos()
@@ -49,6 +50,7 @@ public class NPCStateMachine : BaseStateMachine
         _animator = GetComponent<Animator>();
         _isHidingParameterHash = Animator.StringToHash("isHiding");
         _initialAgentSpeed = _agent.speed;
+        _playerStats = GameObject.FindWithTag("Player").GetComponent<PlayerStats>();
 
         CurrentState = IdleState;
         CurrentState.OnEnterState(this);
