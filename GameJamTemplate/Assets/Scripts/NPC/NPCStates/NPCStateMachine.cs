@@ -19,6 +19,7 @@ public class NPCStateMachine : BaseStateMachine
     public NPCHideState HideState;
     public NPCPatrolState PatrolState;
     public NPCCatchState CatchState;
+    public NPCAttackState AttackState;
     public float Damage;
 
     private Eyes _eyes;

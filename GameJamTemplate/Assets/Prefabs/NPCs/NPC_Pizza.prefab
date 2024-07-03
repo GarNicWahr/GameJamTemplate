@@ -139,10 +139,13 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
   CatchState:
-    CatchDistance: 0
-    MinHitTime: 0
-    MaxHitTime: 0
-  Damage: 0
+    CatchDistance: 1
+    MinHitTime: 5
+    MaxHitTime: 6
+  AttackState:
+    MinHitTime: 0.5
+    MaxHitTime: 1
+  Damage: 15
   agent: {fileID: 0}
 --- !u!95 &5273463443137920817
 Animator:
@@ -242,11 +245,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 194908791138528138}
     m_Modifications:
-    - target: {fileID: 2444192525017600472, guid: b20aab07f172b01438ff76b711680b7f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7271816496736727665, guid: 54db97ad724815843bc574cf5a2677ed,
         type: 3}
       propertyPath: m_Enabled
@@ -321,6 +319,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pizza_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444192525017600472, guid: b20aab07f172b01438ff76b711680b7f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6337200122168818578, guid: 54db97ad724815843bc574cf5a2677ed, type: 3}

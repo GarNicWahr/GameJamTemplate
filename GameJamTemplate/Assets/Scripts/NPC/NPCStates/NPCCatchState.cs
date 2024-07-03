@@ -23,40 +23,36 @@ public class NPCCatchState : BaseState
         _playerStats = GameObject.FindWithTag("Player").GetComponent<PlayerStats>();
         _leaveTime = Time.time + UnityEngine.Random.Range(MinHitTime, MaxHitTime);
 
-        npcStateMachine.SetAgentSpeedMultiplier(1f);
+        npcStateMachine.SetAgentSpeedMultiplier(1.25f);
 
     }
 
     public override void OnUpdateState(BaseStateMachine controller)
     {
-        Debug.Log("NPCCatchState:OnUpdateState");
         var npcStateMachine = controller as NPCStateMachine;
+        float distance = Vector3.Distance(npcStateMachine.transform.position + new Vector3(0, 0.5f, 0), (npcStateMachine.PlayerPosition + new Vector3(0, 0.5f, 0)));
+
+        //Debug.Log("Distanz ist:" + distance);
+        Debug.Log("NPCCatchState:OnUpdateState>>"+distance+ ", CatchDistance:"+ CatchDistance);
+        
         npcStateMachine.SetDestination(npcStateMachine.PlayerPosition);
 
-        if(_isStopped)
-        {
-            if(Time.time > _leaveTime)
-            {
-                npcStateMachine.agent.enabled = true;
-                _isStopped = false;
-            }
-        }
 
-        // Transitions
+        // When Player is hit > IdleState
+        if (distance <= CatchDistance)
+        {
+            npcStateMachine.SwitchToState(npcStateMachine.AttackState);
+        }
+        
+        /*
         // Can't see or hear player
         if (!npcStateMachine.CanHearPlayer && !npcStateMachine.CanSeePlayer)
         {
             npcStateMachine.SwitchToState(npcStateMachine.IdleState);
         }
-
-        // When Player is hit > IdleState
-        if (Vector3.Distance(npcStateMachine.NPCPosition, npcStateMachine.PlayerPosition) <= CatchDistance)
-        {
-            _playerStats.SetValues(0, _playerStats.StatValues(true) - npcStateMachine.Damage);
-
-            npcStateMachine.agent.enabled = false;
-            _isStopped = true;
-        }
+        */
+        
+        
     }
 
     public override void OnExitState(BaseStateMachine controller)
