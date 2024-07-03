@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1831386903553497103}
   - component: {fileID: 1739124355825358486}
   - component: {fileID: 7148901472275265482}
+  - component: {fileID: 2989497556136351364}
   m_Layer: 0
   m_Name: StaminaItem
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092652799544938322}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.004, y: 0.866, z: 1.815}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
@@ -106,6 +107,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.24873964
   m_Center: {x: 0, y: 0.19, z: 0}
+--- !u!114 &2989497556136351364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092652799544938322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71dfcb9282f16d244b69b25843b840e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 2
 --- !u!1001 &4093798006874693410
 PrefabInstance:
   m_ObjectHideFlags: 0

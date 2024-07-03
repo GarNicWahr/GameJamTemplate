@@ -10,27 +10,26 @@ public class PlayerInventory : MonoBehaviour
 
     public TextMeshProUGUI ImmortalityCount;
 
-    private int _availablePushes = 0;
+    public int _availablePushes = 0;
 
     private int _availableImmortality = 0;
 
     private float _availableSpeedboost;
 
+    private PlayerStats _playerStats;
+
     // Start is called before the first frame update
     void Start()
     {
+        _playerStats = GetComponent<PlayerStats>();
         _availablePushes = 3;
         _availableImmortality = 0;
-        
         UpdateHUD();
-
-   
+        _playerStats.SetValues(1, 100f);
+        _availableSpeedboost = _playerStats.StatValues(false);
     }
 
-    private void Update()
-    {
-        _availableSpeedboost = StaminaSlider.value;
-    }
+    
 
     public void ItemCollected(int index)
     {
@@ -45,9 +44,12 @@ public class PlayerInventory : MonoBehaviour
         }
         if(index == 2 && _availableSpeedboost <= 100)
         {
+         
             _availableSpeedboost = 100f;
+            _playerStats.SetValues(1, 100f);
 
         }
+        
         UpdateHUD();
     }
 
@@ -57,7 +59,6 @@ public class PlayerInventory : MonoBehaviour
 
         ImmortalityCount.text = _availableImmortality.ToString();
 
-        StaminaSlider.value = _availableSpeedboost;
     }
 
 }
