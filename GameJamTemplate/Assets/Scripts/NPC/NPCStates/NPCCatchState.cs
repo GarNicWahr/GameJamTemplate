@@ -5,13 +5,19 @@ using UnityEngine.SceneManagement;
 [Serializable]
 public class NPCCatchState : BaseState
 {
-    public float catchDistance;
+    public float CatchDistance;
+
+    public float Damage;
+
+    private PlayerStats _playerStats;
     public override void OnEnterState(BaseStateMachine controller)
     {
         Debug.Log("NPCCatchState:OnEnterState");
         var npcStateMachine = controller as NPCStateMachine;
 
         npcStateMachine.SetAgentSpeedMultiplier(1.5f);
+
+        _playerStats = GameObject.FindWithTag("Player").GetComponent<PlayerStats>();
     }
 
     public override void OnUpdateState(BaseStateMachine controller)
@@ -20,9 +26,9 @@ public class NPCCatchState : BaseState
         var npcStateMachine = controller as NPCStateMachine;
         npcStateMachine.SetDestination(npcStateMachine.PlayerPosition);
 
-        if (Vector3.Distance(npcStateMachine.NPCPosition, npcStateMachine.PlayerPosition) <= catchDistance)
+        if (Vector3.Distance(npcStateMachine.NPCPosition, npcStateMachine.PlayerPosition) <= CatchDistance)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            _playerStats.SetValues(0, _playerStats.StatValues(true) - Damage);
         }
         
         // Transitions
