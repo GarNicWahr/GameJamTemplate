@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9073a25339c78641a4f756596de45eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 15
+  Range: 100
   HeadReferenceTransform: {fileID: 8230196851702434319}
   Fov: 360
   DetectionLayer:
