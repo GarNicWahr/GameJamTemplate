@@ -29,6 +29,7 @@ public class NPCIdleState : BaseState
                 npcStateMachine.SwitchToState(npcStateMachine.FleeState);
             }
         }
+
         //Can see or hear player and the NPC should not flee  > Switch to catch
         if (!npcStateMachine.isFleeing)
         {

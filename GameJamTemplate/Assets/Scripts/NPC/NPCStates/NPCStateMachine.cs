@@ -26,11 +26,10 @@ public class NPCStateMachine : BaseStateMachine
 
     private Transform _player;
     private Transform _npc;
-    private NavMeshAgent _agent;
+    public NavMeshAgent agent;
     private Animator _animator;
     private float _initialAgentSpeed;
     private int _isHidingParameterHash;
-    private PlayerStats _playerStats;
 
 #if UNITY_EDITOR
     private void OnDrawGizmos()
@@ -46,11 +45,10 @@ public class NPCStateMachine : BaseStateMachine
 
         _player = GameObject.FindWithTag("Player").transform;
         _npc = GetComponent<Transform>();
-        _agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
         _isHidingParameterHash = Animator.StringToHash("isHiding");
-        _initialAgentSpeed = _agent.speed;
-        _playerStats = GameObject.FindWithTag("Player").GetComponent<PlayerStats>();
+        _initialAgentSpeed = agent.speed;
 
         CurrentState = IdleState;
         CurrentState.OnEnterState(this);
@@ -58,17 +56,17 @@ public class NPCStateMachine : BaseStateMachine
 
     public override void Tick()
     {
-        _animator.SetFloat("speed", _agent.velocity.magnitude);
+        _animator.SetFloat("speed", agent.velocity.magnitude);
     }
 
     public void SetDestination (Vector3 destination)
     {
-        _agent.SetDestination(destination);
+        agent.SetDestination(destination);
     }
 
     public void SetAgentSpeedMultiplier(float multiplier)
     {
-        _agent.speed = _initialAgentSpeed * multiplier;
+        agent.speed = _initialAgentSpeed * multiplier;
     }
 
     public void SetHideAnimation(bool isHiding)
