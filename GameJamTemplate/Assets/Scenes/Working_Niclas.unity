@@ -302,11 +302,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Banana
       objectReference: {fileID: 0}
-    - target: {fileID: 1447519489968480153, guid: 49e89ee957c4c054b8d4697a8571eb73,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 1948041814759650294, guid: 49e89ee957c4c054b8d4697a8571eb73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1818,17 +1813,17 @@ PrefabInstance:
     - target: {fileID: 4634149447922440364, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.03654209
+      value: 0.03654203
       objectReference: {fileID: 0}
     - target: {fileID: 4634149447922440364, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0020927866
+      value: 0.0020927826
       objectReference: {fileID: 0}
     - target: {fileID: 4634149447922440364, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.05713858
+      value: -0.057138585
       objectReference: {fileID: 0}
     - target: {fileID: 4716863435354328118, guid: 021795922bc459742870509b8376988a,
         type: 3}
@@ -2043,12 +2038,12 @@ PrefabInstance:
     - target: {fileID: 9107703046831314696, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.036544334
+      value: 0.036544297
       objectReference: {fileID: 0}
     - target: {fileID: 9107703046831314696, guid: 021795922bc459742870509b8376988a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.002052902
+      value: 0.0020529
       objectReference: {fileID: 0}
     - target: {fileID: 9174794827813740333, guid: 021795922bc459742870509b8376988a,
         type: 3}
