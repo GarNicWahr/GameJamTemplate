@@ -32,13 +32,13 @@ public class NPCStateMachine : BaseStateMachine
     private float _initialAgentSpeed;
     private int _isHidingParameterHash;
 
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         WaypointGizmos.DrawWayPoints(PatrolState.Waypoints);
     }
 
-#endif
+#endif*/
     public override void Initialize()
     {
         _eyes = GetComponentInChildren<Eyes>();
@@ -51,7 +51,7 @@ public class NPCStateMachine : BaseStateMachine
         _isHidingParameterHash = Animator.StringToHash("isHiding");
         _initialAgentSpeed = agent.speed;
 
-        CurrentState = IdleState;
+        CurrentState = CatchState;
         CurrentState.OnEnterState(this);
     }
 

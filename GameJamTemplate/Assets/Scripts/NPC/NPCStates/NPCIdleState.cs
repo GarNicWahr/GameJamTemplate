@@ -40,10 +40,10 @@ public class NPCIdleState : BaseState
         }
 
         //Time is up > Switch to patrol
-        if (Time.time > _leaveTime)
+        /*if (Time.time > _leaveTime)
         {
             npcStateMachine.SwitchToState(npcStateMachine.PatrolState);
-        }
+        }*/
 
     }
 

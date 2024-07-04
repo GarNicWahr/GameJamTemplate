@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1432594406420188874}
+  - component: {fileID: 802819642136339681}
+  - component: {fileID: 3355776975150560410}
   m_Layer: 0
   m_Name: StaminaItemPrefab
   m_TagString: Untagged
@@ -33,6 +35,42 @@ Transform:
   - {fileID: 6023505048483252196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &802819642136339681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8498662635314092820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71dfcb9282f16d244b69b25843b840e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 2
+  ParticleSplash: {fileID: 8774706493074588941, guid: cf53761e44109634093c263bad4f8fea,
+    type: 3}
+--- !u!135 &3355776975150560410
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8498662635314092820}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.8390817
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2984867275782941249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -170,7 +208,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2989497556136351364, guid: cac817187747b87459a681abee3612df, type: 3}
+    - {fileID: 7148901472275265482, guid: cac817187747b87459a681abee3612df, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1564656313698719624, guid: cac817187747b87459a681abee3612df, type: 3}
     m_AddedGameObjects: []
