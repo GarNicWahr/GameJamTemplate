@@ -20,6 +20,8 @@ public class ThirdPersonController : MonoBehaviour
 
     public float ImmortalityDelay;
 
+    public GameObject GameOverScreen;
+
     // Script Component
     private PlayerPhysics _scriptPlayerPhysics;
 
@@ -144,6 +146,7 @@ public class ThirdPersonController : MonoBehaviour
         if(_playerStats.StatValues(true)<= 0)
         {
             _animator.SetBool(_isDeadParameterHash, true);
+            GameOverScreen.SetActive(true);
         }
 
 
