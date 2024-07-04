@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197666718054205742}
+  - component: {fileID: 5151069526932563204}
+  - component: {fileID: 6434025891232085261}
   m_Layer: 0
   m_Name: ImmortalityItemPrefab
   m_TagString: Untagged
@@ -33,6 +35,42 @@ Transform:
   - {fileID: 7838666472820448741}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5151069526932563204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762033017517669632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71dfcb9282f16d244b69b25843b840e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 1
+  ParticleSplash: {fileID: 8774706493074588941, guid: cf53761e44109634093c263bad4f8fea,
+    type: 3}
+--- !u!135 &6434025891232085261
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762033017517669632}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.0863653
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1599658251020742720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64,7 +102,7 @@ PrefabInstance:
     - target: {fileID: 8861862597145079205, guid: 652f8a0761d02f74ea203da0938cb351,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.335
+      value: -0.437
       objectReference: {fileID: 0}
     - target: {fileID: 8861862597145079205, guid: 652f8a0761d02f74ea203da0938cb351,
         type: 3}
@@ -74,7 +112,7 @@ PrefabInstance:
     - target: {fileID: 8861862597145079205, guid: 652f8a0761d02f74ea203da0938cb351,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.512
+      value: -0.021
       objectReference: {fileID: 0}
     - target: {fileID: 8861862597145079205, guid: 652f8a0761d02f74ea203da0938cb351,
         type: 3}
@@ -133,17 +171,17 @@ PrefabInstance:
     - target: {fileID: 1027929236454932680, guid: 3d8655b82f90f984598d3bc933a7177c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8947613
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1027929236454932680, guid: 3d8655b82f90f984598d3bc933a7177c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.02221787
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1027929236454932680, guid: 3d8655b82f90f984598d3bc933a7177c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5504341
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1027929236454932680, guid: 3d8655b82f90f984598d3bc933a7177c,
         type: 3}
@@ -185,7 +223,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ImmortalityItem
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8530534305073997398, guid: 3d8655b82f90f984598d3bc933a7177c, type: 3}
+    - {fileID: 4501080757877618030, guid: 3d8655b82f90f984598d3bc933a7177c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
