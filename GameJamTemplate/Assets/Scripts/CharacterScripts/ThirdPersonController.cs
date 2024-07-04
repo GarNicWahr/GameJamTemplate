@@ -105,7 +105,7 @@ public class ThirdPersonController : MonoBehaviour
         // Should run? (left or right shift held)
         if (shouldRun)
         {
-
+            _currentStamina = _playerStats.StatValues(false);
             _currentStamina -= StaminaUseage * Time.deltaTime;
             _playerStats.SetValues(1, _currentStamina);
             if (_currentStamina <= 0)
