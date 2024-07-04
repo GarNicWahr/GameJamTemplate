@@ -35,12 +35,13 @@ public class NPCCatchState : BaseState
         //Debug.Log("Distanz ist:" + distance);
         //Debug.Log("NPCCatchState:OnUpdateState>>"+distance+ ", CatchDistance:"+ CatchDistance);
 
-        if (npcStateMachine.CanHearPlayer || npcStateMachine.CanSeePlayer)
+        /* if (npcStateMachine.CanHearPlayer || npcStateMachine.CanSeePlayer)
         {
             npcStateMachine.SetDestination(npcStateMachine.PlayerPosition);
         }
-        //npcStateMachine.SetDestination(npcStateMachine.PlayerPosition);
-
+        */
+        npcStateMachine.SetDestination(npcStateMachine.PlayerPosition);
+        
 
         // When Player is hit > IdleState
         if (distance <= CatchDistance)
