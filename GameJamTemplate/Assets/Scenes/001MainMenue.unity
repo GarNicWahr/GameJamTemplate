@@ -1037,7 +1037,7 @@ PrefabInstance:
     - target: {fileID: 1818388066712167765, guid: 14aba157522d4fc439d7ca5605b18140,
         type: 3}
       propertyPath: m_text
-      value: The BBD Apcalypse
+      value: The BBD Apocalypse
       objectReference: {fileID: 0}
     - target: {fileID: 1818388066712167765, guid: 14aba157522d4fc439d7ca5605b18140,
         type: 3}
