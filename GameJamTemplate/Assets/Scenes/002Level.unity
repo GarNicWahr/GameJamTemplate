@@ -1129,10 +1129,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 415166047}
     m_Modifications:
+    - target: {fileID: 49044460500454675, guid: 8317fa5eceee467479684bf89933f78b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408627032565586399, guid: 8317fa5eceee467479684bf89933f78b,
+        type: 3}
+      propertyPath: m_text
+      value: Main Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791315028019356237, guid: 8317fa5eceee467479684bf89933f78b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5763646283370615672, guid: 8317fa5eceee467479684bf89933f78b,
         type: 3}
       propertyPath: m_Name
       value: PauseOverlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763646283370615672, guid: 8317fa5eceee467479684bf89933f78b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8965492882275150164, guid: 8317fa5eceee467479684bf89933f78b,
         type: 3}
