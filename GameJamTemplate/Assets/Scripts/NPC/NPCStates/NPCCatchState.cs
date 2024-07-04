@@ -33,9 +33,13 @@ public class NPCCatchState : BaseState
         float distance = Vector3.Distance(npcStateMachine.transform.position + new Vector3(0, 0.5f, 0), (npcStateMachine.PlayerPosition + new Vector3(0, 0.5f, 0)));
 
         //Debug.Log("Distanz ist:" + distance);
-        Debug.Log("NPCCatchState:OnUpdateState>>"+distance+ ", CatchDistance:"+ CatchDistance);
-        
-        npcStateMachine.SetDestination(npcStateMachine.PlayerPosition);
+        //Debug.Log("NPCCatchState:OnUpdateState>>"+distance+ ", CatchDistance:"+ CatchDistance);
+
+        if (npcStateMachine.CanHearPlayer || npcStateMachine.CanSeePlayer)
+        {
+            npcStateMachine.SetDestination(npcStateMachine.PlayerPosition);
+        }
+        //npcStateMachine.SetDestination(npcStateMachine.PlayerPosition);
 
 
         // When Player is hit > IdleState
