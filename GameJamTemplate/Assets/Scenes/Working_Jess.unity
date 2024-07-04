@@ -2901,12 +2901,14 @@ PrefabInstance:
       value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ClickSound","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioClip,
         UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"EscMenue","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"GameOverMenue","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ThirdPersonControllerScript","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"ThirdPersonController,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"MouseLockObject","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
     - target: {fileID: 9019888699333667055, guid: 22806b55cdcd23441bb400aaf59851d7,
         type: 3}
       propertyPath: _data._objectReferences.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9019888699333667055, guid: 22806b55cdcd23441bb400aaf59851d7,
         type: 3}
@@ -2918,6 +2920,16 @@ PrefabInstance:
       propertyPath: _data._objectReferences.Array.data[2]
       value: 
       objectReference: {fileID: 943523051}
+    - target: {fileID: 9019888699333667055, guid: 22806b55cdcd23441bb400aaf59851d7,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[3]
+      value: 
+      objectReference: {fileID: 1565605723}
+    - target: {fileID: 9019888699333667055, guid: 22806b55cdcd23441bb400aaf59851d7,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[4]
+      value: 
+      objectReference: {fileID: 1345046184}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -77530,6 +77542,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1565605720}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1565605723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2305937458181230781, guid: 98d16627c9671884b90562097a182867,
+    type: 3}
+  m_PrefabInstance: {fileID: 1565605720}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231843291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f5ec84133bbd419e99e0a818dffe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1568974440 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5089459357864891745, guid: 3f9f0539f02aa194b984f43bf7bba756,
