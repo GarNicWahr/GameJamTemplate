@@ -194,12 +194,12 @@ PrefabInstance:
     - target: {fileID: 6183382899280392248, guid: 98d16627c9671884b90562097a182867,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000026325379
+      value: 0.000026384823
       objectReference: {fileID: 0}
     - target: {fileID: 6183382899280392248, guid: 98d16627c9671884b90562097a182867,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000019597724
+      value: 0.0000019641961
       objectReference: {fileID: 0}
     - target: {fileID: 6183382899280392248, guid: 98d16627c9671884b90562097a182867,
         type: 3}
@@ -209,7 +209,7 @@ PrefabInstance:
     - target: {fileID: 6183382899280392248, guid: 98d16627c9671884b90562097a182867,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.07423879
+      value: -0.07423875
       objectReference: {fileID: 0}
     - target: {fileID: 6535787102510618624, guid: 98d16627c9671884b90562097a182867,
         type: 3}
@@ -271,15 +271,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Working02
       objectReference: {fileID: 0}
+    - target: {fileID: 7848530789968141322, guid: 98d16627c9671884b90562097a182867,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8168377335261875207, guid: 98d16627c9671884b90562097a182867,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000026387605
+      value: 0.000026391623
       objectReference: {fileID: 0}
     - target: {fileID: 8168377335261875207, guid: 98d16627c9671884b90562097a182867,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000015112334
+      value: 0.0000015114634
       objectReference: {fileID: 0}
     - target: {fileID: 8168377335261875207, guid: 98d16627c9671884b90562097a182867,
         type: 3}
@@ -2988,17 +2993,17 @@ PrefabInstance:
     - target: {fileID: 3817606938728006757, guid: 8354795f073e55f43bc327b1a4c1e679,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4473084311621955056, guid: 8354795f073e55f43bc327b1a4c1e679,
         type: 3}
       propertyPath: SpawnInterval
-      value: 30
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4473084311621955056, guid: 8354795f073e55f43bc327b1a4c1e679,
         type: 3}
       propertyPath: EnemiesPerWave
-      value: 7
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4496349753423031519, guid: 8354795f073e55f43bc327b1a4c1e679,
         type: 3}
