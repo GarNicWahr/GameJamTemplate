@@ -31,6 +31,11 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemies();
             _timeSinceLastSpawn = 0f;
         }
+
+        if(SpawnInterval <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void SpawnEnemies()
